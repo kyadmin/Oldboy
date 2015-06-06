@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+	int a;
+	int b;
+	for (a=0;a<50;a++)
+	{
+		for (b=0;b<50;b++)
+		{
+			a+b=50;
+			printf("A is %s,B is %s",a,b);
+		}
+	}
+return 0;
+}

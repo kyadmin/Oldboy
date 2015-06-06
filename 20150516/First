@@ -1,0 +1,8 @@
+#inculde <stdio.h>
+
+int main()
+{
+	int a=4;
+	a+=a*=a;
+	printf("%s",a)
+}
