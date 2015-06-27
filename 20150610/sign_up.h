@@ -10,6 +10,7 @@ typedef struct custom{
 	int age;
 	char email[30];
 }User;
+
 int sign_up()
 {
 	User user,temp;
@@ -46,25 +47,7 @@ int sign_up()
 	fp = fopen("custom.txt","ab+");
 	fwrite(&user,sizeof(User),1,fp);
 	fclose(fp);
-	printf("注册成功!\n");
+	printf("--------注册成功!--------\n");
 	return 0;
 	
-}
-
-void read_user()
-{
-	FILE *fp;
-	int fr;
-	User temp;
-	fp=fopen("custom.txt","ab+");
-	printf("当前在线好友\n");
-	while(1)
-	{
-		fr=fread(&temp,sizeof(User),1,fp);
-		if(fr==0)
-		{
-		break;
-		}
-		printf("%s\n",temp.username);
-	}
 }

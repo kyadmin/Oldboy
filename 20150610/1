@@ -1,7 +1,8 @@
 #include "sign_up.h"
-#include "display_all.h"
 #include "sign_in.h"
 #include "menu_main.h"
+#include "display_all.h"
+
 
 int main()
 {

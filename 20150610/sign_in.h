@@ -1,3 +1,5 @@
+#include "menu_A.h"
+
 int sign_in()
 {
 	User user,temp;
@@ -17,15 +19,28 @@ int sign_in()
                 {
                         break;
                 }
-	if((strcmp(user.username,temp.username)==0)&&(strcmp(user.password,temp.password)==0))
-	{
+		if((strcmp(user.username,temp.username)==0)&&(strcmp(user.password,temp.password)==0))
+		{
 		printf("用户登录成功!\n");
+		menu_A();
+		while (1)
+		{
+		int id;
+        	printf("#");
+       		scanf("%d",&id);
+        	switch(id)
+        	{
+        		//case 1:printf("display all");break;
+        		case 1:display_all();break;
+        		case 2:printf("watch someone");break;
+        		case 3:printf("display detailed infomation");break;
+        		default:break;
+        	}	
+		}
+        	}
+		break;
 	}
-	else
-	{
 		printf("用户名或密码错误!\n");	
-	}
 	
 	return 0;
-}
 }

@@ -22,7 +22,8 @@ int main()
 	//insert struct afer tail
 	for (i=0;i<total;i++) {
 		struct student* node = (struct student *)malloc(sizeof(struct student));
-		strcpy(node->name,"Alex");
+		//strcpy(node->name,"Alex-%s");
+		sprintf(node->name,"Alex-%d",i);
 		node->age = i;
 		node->score = i*2;
 		node->next=NULL;
